@@ -1,0 +1,10 @@
+https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/
+
+class Solution{
+  public:
+    int middle(int A, int B, int C){
+      if (A < B)
+        return (B < C)? B : max(A, C);
+      return (A < C)? A : max(B, C);  //code here//Position this line where user code will be pasted.
+    }
+};
