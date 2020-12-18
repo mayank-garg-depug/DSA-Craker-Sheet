@@ -1,0 +1,24 @@
+https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1
+
+
+
+void sort012(int a[], int n)
+{
+    // coode here
+    int i=0,m=0;
+    while(i<3)
+    {
+        
+        for(int j=m;j<n;j++)
+    {
+        if(a[j]==i)
+       {
+         a[j]=a[m];
+         a[m]=i;
+         m++;
+       }
+        
+    }
+    i++;
+    }
+}
