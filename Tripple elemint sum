@@ -1,0 +1,42 @@
+https://practice.geeksforgeeks.org/problems/triplet-sum-in-array/0
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int t;
+	cin>>t;
+	while(t--)
+	{
+		int n,k;
+		cin>>n>>k;
+		int a[n],m[100005]={0};
+		for(int i=0;i<n;i++)
+		{
+			cin>>a[i];
+			m[a[i]]++;
+		}
+		int i;
+		for( i=0;i<n;i++)
+		{
+			int x=k-a[i];
+			if(x>=0)
+			{
+				for(int j=i+1;j<n;j++)
+				{
+					if(x-a[i]>=0&&m[x-a[j]]>0)
+				{
+						cout<<"1"<<endl;
+				   i=100005;
+				   break;
+				}
+				}
+			}
+	}
+	if(i!=100005)
+	cout<<"0"<<endl;
+	
+ //   lable:
+	}
+}
