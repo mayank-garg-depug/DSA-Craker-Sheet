@@ -1,0 +1,22 @@
+https://practice.geeksforgeeks.org/problems/smallest-subarray-with-sum-greater-than-x5651/1
+
+
+
+int subarray(int a[],int n,int k)
+{
+int start=0,end=0,s=0,m=n+1;
+while(end<n)
+{
+while(s<=k&&end<n)
+{
+s+=a[end++];
+}
+while(s>k&&start<n)
+{
+m=min(m,end-start);
+s-=a[start];
+start++;
+}
+}
+return m;
+}
