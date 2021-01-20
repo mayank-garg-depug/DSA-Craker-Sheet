@@ -1,0 +1,25 @@
+https://practice.geeksforgeeks.org/problems/palindromic-array-1587115620/1
+
+
+
+int palindromefunc(int a[],int n)
+{
+int t,m=0;
+for(int i=0;i<n;i++)
+{
+t=a[i];
+int s=0;
+while(t>0)
+{
+s=s*10+t%10;
+t=t/10;
+}
+if(s==a[i])
+m++;
+}
+
+if(m==n)
+return 1;
+else
+return 0;
+}
