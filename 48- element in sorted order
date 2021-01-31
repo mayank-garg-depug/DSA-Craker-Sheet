@@ -1,0 +1,24 @@
+https://practice.geeksforgeeks.org/problems/sorted-matrix2333/1
+
+
+
+class Solution {
+  public:
+    vector<vector<int>> sortedMatrix(int N, vector<vector<int>> m) {
+        // code here
+   vector<int> v;
+        //int a[100001]={0};
+        for(int i=0;i<m.size();i++)
+        {
+           for(int j=0;j<m[0].size();j++)
+        {    int x=m[i][j];
+            v.push_back(x);
+        }  
+        }
+           sort(v.begin(), v.end());
+        int c = 0;
+        for (int i = 0; i < N; i++)
+            for (int j = 0; j < N; j++) m[i][j] = v[c++];
+        return m;
+    }
+};
